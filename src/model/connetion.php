@@ -1,6 +1,8 @@
 <?php
 
- class Connection
+namespace src\Model;
+
+class Connection
 {
     private static $instance;
 
@@ -11,12 +13,9 @@
         $password = '';
         $dbName = 'phpcrud';
 
-        if(!isset(self::$instance))
-        {
-            self::$instance = new PDO("mysql:$serverName; dbname=$dbName",$userName, $password);
-        }
-        else
-        {
+        if (!isset(self::$instance)) {
+            self::$instance = new PDO("mysql:$serverName; dbname=$dbName", $userName, $password);
+        } else {
             return self::$instance;
         }
     }

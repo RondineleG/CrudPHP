@@ -1,14 +1,16 @@
       
 <?php
 
+namespace src\Model;
+
 class Product
 {
-     private $Id, $Name , $Description;
+     private $Id, $Name, $Description;
 
      public function getId()
      {
           return $this->Id;
-     }      
+     }
      public function setId($Id)
      {
           $this->Id = $Id;
@@ -31,8 +33,7 @@ class Product
      public function setDescription($Description)
      {
           $this->Description = $Description;
-     }     
-    
+     }
 }
 
 
