@@ -15,8 +15,8 @@ class Connection
 
         if (!isset(self::$instance)) {
             self::$instance = new PDO("mysql:$serverName; dbname=$dbName", $userName, $password);
-        } else {
-            return self::$instance;
-        }
+        } 
+        return self::$instance;
+        
     }
 }
