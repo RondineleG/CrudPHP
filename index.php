@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CRUD PHP</title>
-    </style>
+    <link href="/Assets/css/main.css" rel="stylesheet">
 </head>
 
 <body>
