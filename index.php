@@ -9,6 +9,4 @@
 
     var_dump($product);
 
-    $productDAO = new \src\Model\ProductDAO();
-
-    $productDAO->Create($product);
+    
