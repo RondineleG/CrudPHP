@@ -3,9 +3,17 @@
 
 class Product
 {
-     private $Name , $Description;
+     private $Id, $Name , $Description;
 
-     
+     public function getId()
+     {
+          return $this->Id;
+     }      
+     public function setId($Id)
+     {
+          $this->Id = $Id;
+     }
+
      public function getName()
      {
           return $this->Name;
@@ -23,7 +31,8 @@ class Product
      public function setDescription($Description)
      {
           $this->Description = $Description;
-     }
+     }     
+    
 }
 
 
