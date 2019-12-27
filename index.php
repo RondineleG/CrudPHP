@@ -1,8 +1,6 @@
  <?php
 
     require_once 'vendor/autoload.php';
-     require './src/model/Product.php';
-     require './src/model/ProductDAO.php';
 
     $product = new \src\Model\Product();
     $product->setName("Pen");
@@ -11,4 +9,19 @@
 $productDAO = new \src\Model\ProductDAO();
 
 $productDAO->Create($product);
-    
+
+$productDAO->Delete(5);
+
+$productDAO->Update($produto);
+
+$productDAO->Create($produto);
+
+$productDAO->Read();
+
+var_dump($produtoDao->Read());
+
+foreach($productDAO->read() as $produto)
+{
+    echo $product['name']."<br>".$produto['description']."<hr>";
+}
+   
