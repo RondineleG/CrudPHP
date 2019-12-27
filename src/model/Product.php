@@ -4,7 +4,9 @@ namespace src\Model;
 
 class Product
 {
-     private $Id, $Name, $Description;
+     private $Id;
+     private $Name;
+     private $Description;
 
      public function getId()
      {
@@ -34,6 +36,3 @@ class Product
           $this->Description = $Description;
      }
 }
-
-
-?>
