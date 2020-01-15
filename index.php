@@ -1,12 +1,10 @@
  <?php
 
-    require_once 'vendor/autoload.php';
-
     $product = new \src\Model\Product();
     $product->setName("Pen");
     $product->setDescription("My pen is very coll");
 
-$productDAO = new \src\Model\ProductDAO();
+$productDAO = new ProductRepository();
 
 $productDAO->Create($product);
 
