@@ -4,11 +4,13 @@ namespace src\Repository;
 
 use src\Data\Connection;
 
+use src\Model\Product;
+
 class ProductRepository
 {
     public function Create(Product $product)
     {
-        $sql = 'INSERT INTO product (Name, Description)VALUES(?,?)';
+        $sql = 'INSERT INTO phpcrud.product (Name, Description)VALUES(?,?)';
         $stmt = Connection::getConnection()->prepare($sql);
         $stmt -> bindValue(1, $product->getName());
         $stmt -> bindValue(2, $product->getDescription());
@@ -17,7 +19,7 @@ class ProductRepository
 
     public function Read()
     {
-        $sql = 'SELECT * FROM product';
+        $sql = 'SELECT * FROM phpcrud.product';
         $stmt = Connection::getConnection()->prepare($sql);
         $stmt->execute();
         if($stmt->rowCount() > 0 )
@@ -34,7 +36,7 @@ class ProductRepository
 
     public function Update(Product $product)
     {
-        $sql = 'UPDATE produtos SET Name = ?, Description = ? WHERE id = ?';
+        $sql = 'UPDATE phpcrud.product SET Name = ?, Description = ? WHERE id = ?';
         $stmt = Connection::getConnection()->prepare($sql);
         $stmt->bindValue(1,$product->getName());
         $stmt->bindValue(2,$product->getDescription());
@@ -44,7 +46,7 @@ class ProductRepository
 
     public function Delete($id)
     {
-        $sql = 'DELETE FROM produtos WHERE id = ?';
+        $sql = 'DELETE FROM phpcrud.product WHERE id = ?';
         $stmt = Connection::getConnection()->prepare($sql);
         $stmt->bindValue(1,$id);
         $stmt->execute();

@@ -1,25 +1,33 @@
- <?php
+<?php
 
-    $product = new \src\Model\Product();
+namespace src;
+
+require 'autoload.php';
+
+use src\Model\Product;
+use src\Repository\ProductRepository;
+
+    $product = new Product();
     $product->setName("Pen");
-    $product->setDescription("My pen is very coll");
+    $product->setDescription("My pen");
 
-$productDAO = new ProductRepository();
+$productRepository = new ProductRepository();
 
-$productDAO->Create($product);
+$productRepository->Create($product);
 
-$productDAO->Delete(5);
+$productRepository->Delete(5);
 
-$productDAO->Update($produto);
+$productRepository->Update($product);
 
-$productDAO->Create($produto);
+$productRepository->Create($product);
 
-$productDAO->Read();
+$productRepository->Read();
 
-var_dump($produtoDao->Read());
+var_dump($productRepository->Read());
 
-foreach($productDAO->read() as $produto)
+foreach($productRepository->read() as $product)
 {
-    echo $product['name']."<br>".$produto['description']."<hr>";
+    echo $product['name']."<br>".$product['description']."<hr>";
 }
    
+?>

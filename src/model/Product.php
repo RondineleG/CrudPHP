@@ -7,6 +7,7 @@ class Product
      private $Id;
      private $Name;
      private $Description;
+     
 
      public function getId()
      {
